@@ -1,0 +1,92 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  
+<section id="contact">
+
+<div class="row section-head">
+
+	<div class="twelve columns">
+		{% if name %}
+			<h1>Get In Touch With Us<span>.</span></h1>
+			<hr />
+			<h2>Thanks {{name}} ! </h2>
+			<h5>We recieved your email and we will respond to you shortly</h5>
+			</div>
+		{% else %}
+
+</div> <!-- end section-head -->
+
+<div class="row">
+      	
+	<div id="contact-form" class="six columns tab-whole left">
+
+	  <!-- form -->
+	  <form name="contactForm" id="contactForm" method="post" action=""  >
+		  {% csrf_token %}
+			<fieldset>
+
+			<div class="group">
+					  <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minLength="2" required />
+			</div>
+			<div>
+				   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required />
+			 </div>
+			<div>
+					  <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject"  value="" />
+			 </div>                       
+			<div>
+				   <textarea name="contactMessage"  id="contactMessage" placeholder="message" rows="10" cols="50" required ></textarea>
+			 </div>                      
+			<div>
+			   <button class="submitform" type="submit" name="submit">Submit</button>
+			   <div id="submit-loader">
+				  <div class="text-loader">Sending...</div>                             
+					   <div class="s-loader">
+								<div class="bounce1"></div>
+								<div class="bounce2"></div>
+								<div class="bounce3"></div>
+						  </div>
+					  </div>
+			</div>
+
+			</fieldset>
+		</form> <!-- Form End -->
+		{% endif %}
+
+
+
+	 <!-- contact-warning -->
+	 <div id="message-warning"></div>
+	 <!-- contact-success -->
+	   <div id="message-success">
+		<i class="icon-ok"></i>Your message was sent, thank you!<br />
+	   </div>
+
+  </div>
+
+  <div class="six columns tab-whole right">
+
+	 <p class="lead">We'd love to talk with you about your project. Drop us a line or message, and we'll get to you in short period of time.
+		 If you want to hear from us as fast as possible give us a call or whassapp chat us, Thanks you.
+
+	  <h3 class="address">Come Visit</h3>
+
+	  <p class="lead">
+	 No. 28 Tafawa Balewa Way<br>
+	 Along Katsina Dutsin-Ma Road <br>
+	 Katsina, Katsina State<br>
+	 Nigeria
+	 </p >
+
+	 <h3>Contact Numbers:</h3>
+		<p class="lead">Nigeria: +2348037935340<br>
+			Niger: +22789844181<br>
+		</p>
+
+  </div>
+
+</div> <!-- end row -->
+
+</section>  <!-- end contact -->
+{% endblock %}

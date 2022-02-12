@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <!--- basic page needs
+   ================================================== -->
+    <meta charset="utf-8" />
+    <title>Green|arch</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- mobile specific metas
+   ================================================== -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <!-- CSS
+   ================================================== -->
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <link rel="stylesheet" href="/static/css/vendor.min.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="/static/css/materializecard.css" />
+    <link rel="stylesheet" href="/static/js/modernizr.js" />
+
+    <!-- script
+   ================================================== -->
+
+    <!-- favicons
+	================================================== -->
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="static/images/favicon.png"
+    />
+  </head>
+
+  <body>
+    <!-- header
+   ================================================== -->
+    <header id="main-header">
+      <div class="row">
+        <div class="logo">
+          <a href="{% url 'homepage' %}">GreenArc</a>
+        </div>
+
+        <nav id="nav-wrap">
+          <a class="mobile-btn" href="#nav-wrap" title="Show navigation">
+            <span class="menu-icon">Menu</span>
+          </a>
+          <a class="mobile-btn" href="#" title="Hide navigation">
+            <span class="menu-icon">Menu</span>
+          </a>
+
+          <ul id="nav" class="nav">
+            <li><a href="{% url 'homepage'%}">Home.</a></li>
+            <li><a href="{% url 'list'%}">Projects.</a></li>
+            <li><a href="{% url 'members'%}">Our Team.</a></li>
+            <li><a href="{% url 'about'%}">About.</a></li>
+            <li><a href="{% url 'contact'%}">Contact.</a></li>
+          </ul>
+          <!-- end #nav -->
+        </nav>
+        <!-- end #nav-wrap -->
+
+        <ul class="header-social">
+          <li>
+            <a href="https://web.facebook.com/GreenArch-Associates-105353015409978"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/GreenArchngn"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/greenarch-associates-18a8b4231/"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <!-- end header -->
+
+    {% block content %} {% endblock %}
+
+    <!-- Footer
+   ================================================== -->
+    <footer>
+      <div class="row">
+        <div class="twelve columns content group">
+          <ul class="social-links">
+            <li>
+              <a href="https://web.facebook.com/GreenArch-Associates-105353015409978"><i class="fa fa-facebook-square"></i></a>
+            </li>
+            <li>
+              <a href="https://twitter.com/GreenArchngn"><i class="fa fa-twitter-square"></i></a>
+            </li>
+          </ul>
+
+          <hr />
+
+          <div class="info">
+            <div class="footer-logo">GreenArch</div>
+
+            <p>
+              GreenArch Associates, we specilize in bringing out the best of
+              this world. We design for comport and beauty.
+            </p>
+          </div>
+        </div>
+
+        <ul class="copyright">
+          <li>&copy; Copyright 2022 GreenArch.</li>
+          <li>Design by <a href="https://sopyern.github.io/My-Portfolio-Website/index.html?fbclid=IwAR1TWScLH-szdMK1DAhFe1il_tSjbXmiSgug05reVM0UpSC3OcZYV2ajcd8">Abdulsbako</a>.</li>
+        </ul>
+      </div>
+      <!-- end row -->
+    </footer>
+    <!-- end footer -->
+
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+
+    <!-- Java Script
+   ================================================== -->
+    <script src="/static/js/jquery-1.11.3.min.js"></script>
+    <script src="/static/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="/static/js/jquery.flexslider-min.js"></script>
+    <script src="/static/js/jquery.waypoints.min.js"></script>
+    <script src="/static/js/jquery.validate.min.js"></script>
+    <script src="/static/js/jquery.fittext.js"></script>
+    <script src="/static/js/jquery.placeholder.min.js"></script>
+    <script src="/static/js/jquery.magnific-popup.min.js"></script>
+    <script src="/static/js/modernizr.js"></script>
+    <script src="/static/js/main.js"></script>
+  </body>
+</html>

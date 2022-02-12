@@ -1,0 +1,183 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+  
+<div class="row team section-head">
+
+	<div class="twelve columns">
+
+	  <h1 class="our-team">Meet Our Team<span>.</span></h1>
+
+	  <hr />
+
+   </div>
+
+</div> <!-- end section-head -->
+
+
+	<div class="row">
+
+		<div id="team-wrapper" class="bgrid-fourth s-bgrid-third tab-bgrid-half mob-bgrid-whole group">
+			{% for member in members %}
+			<div class="bgrid member">
+
+					<div class="member-pic">
+						<img src="{{member.picture.url}}" alt="{{member.name}}"/>
+					<div class="mask"></div>
+				</div>
+				<div class="member-name">
+				<h3>{{member.name}}</h3>
+				<span>{{member.position}}</span>
+				</div>
+				<p>{{member.note}} </p>
+			</div> <!-- end member -->
+			{% endfor %}
+		</div> <!-- end team-wrapper -->
+
+	</div> <!-- end row -->
+	
+<div id="call-to-action">
+
+	<div class="row section-ads">
+
+	   <div class="twelve columns">
+
+		   <h2><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">GreenArch Recommends BAKOSHUB<span>.</span></a></h2>
+
+		   <p>
+		   Looking for an awesome and reliable webdesign and graphic design? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT"><span>BAKOSHUB</span></a>.
+			 Get <span>$50 off</span> when you contact them from <span>GreenArch</span>.
+			 <!-- Simply type	the promocode in the box labeled “Promo Code” when placing your order. -->
+			 </p>
+
+			 <div class="action">
+			  <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT" >contact</a>
+		  </div>
+
+		</div>
+
+	</div> <!-- end section-ads -->
+
+</div> <!-- end call-to-action -->
+
+</section> <!-- end about -->
+
+
+  <!-- Testimonials Section
+   ================================================== -->
+   <section id="testimonials">
+
+	<div class="row content flex-container">
+  
+	   <div id="testimonial-slider" class="flexslider">
+
+		  <ul class="slides">
+			 <li>
+				<p>“Green Arch are able to handle quite complex projects
+					 too that some others aren’t. But one of the things 
+					 that I think about with them is they spend a lot of time 
+					 upfront on a project. They’re not just waiting until
+					 wrecking crews start and slap it together.”
+				</p>
+
+				<div class="testimonial-author">
+					  <div class="author-info">
+						 DB Development Systems
+						  <span class="position">Constuction Firm.</span>
+					  </div>
+				</div>
+			   </li> <!-- end slide -->
+
+			 <li>                       
+				<p>I’ve had some questionable experiences with other
+					 Consruction companies in the past, Green Arch has hands
+					  down been the best  Consruction company we’ve worked with, 
+					  roviding us with peace of mind and incredible service.
+				</p>
+				<div class="testimonial-author">
+					  <div class="author-info">
+						  3YSK Construction Nigeria
+						  <span>Constuction firm.</span>
+					  </div>
+				</div>                        
+			 </li> <!-- end slide -->
+
+			 <li>                       
+			  <p>You guys rocked on the sculpture 
+				   project. Thanks so much for doing a great job!"
+			  </p>
+			  <div class="testimonial-author">
+					<div class="author-info">
+						Mustapha Kaila
+						<span>Individual, Niger Republic.</span>
+					</div>
+			  </div>                        
+		   </li> <!-- end slide -->
+			 <li>                       
+			  <p>The Follow bright team is absolutely fantastic to work with 
+				  and I would highly
+				   recommend them no matter what type of project you have.
+			  <div class="testimonial-author">
+					<div class="author-info">
+						Hussaini Lawal Mashi
+						<span>Individual, Nigeri.</span>
+					</div>
+			  </div>                        
+		   </li> <!-- end slide -->
+
+		   <li>                       
+			  <p>“…honestly, it was the team’s excitement. You 
+				  could tell that this was a project that they were
+				   excited to be working on,
+				   and really wanted to do. It was palpable.”
+			  <div class="testimonial-author">
+					<div class="author-info">
+						Bold Space Consulsant
+						<span>Construction firm.</span>
+					</div>
+			  </div>                        
+		   </li> <!-- end slide -->
+
+		   <li>                       
+			  <p>“Green Arch has a unique view towards the land
+				   and architecture; they have a spiritual
+					element to them. They incorporated the spirituality 
+					of the Catholic school in the building. It wasn’t just 
+					a concept. They were able to be specific. And Green Arch,
+					 I think, is really 
+				  connected to the land as something sacred.”
+			  <div class="testimonial-author">
+					<div class="author-info">
+						John Moses
+						<span>Individual, Nigeria.</span>
+					</div>
+			  </div>                        
+		   </li> <!-- end slide -->
+
+		   <li>                       
+			  <p>“It’s a great firm. I love talking about good 
+				  architectural firms. And, as I retire, it’s just a
+				   pleasure to be able to say something really strong and
+					positive about a firm
+				   that I think is one of the top firms in Nigeriabnow.”
+			  <div class="testimonial-author">
+					<div class="author-info">
+						Sanusi Bala
+						<span>Individual, Nigeria.</span>
+					</div>
+			  </div>                        
+		   </li> <!-- end slide -->
+
+
+		  </ul> <!-- end slides -->
+
+	   </div> <!-- end flexslider -->         
+	  
+	</div> <!-- end row -->
+
+ </section> <!-- end testimonials section -->  
+
+</div> <!-- end row -->
+
+</section>  <!-- end contact -->
+{% endblock %}

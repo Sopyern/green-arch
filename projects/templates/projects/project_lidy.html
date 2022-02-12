@@ -1,0 +1,59 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<section id="hero2">
+
+    <div class="row hero-content">
+
+        <div class="twelve columns hero-container">
+
+           <!-- hero-slider start-->
+           <div id="hero-slider">
+
+               <ul class="slides">
+
+                   <!-- slide -->
+                   <li>
+                       <div class="flex-caption">
+                        <h1 class="">Take a look at some of <span id="binhajj">Green Arch</span> awesome and stunning 
+                            STRUCTURES.
+                        </h1>
+                        </div>
+                   </li>
+
+                   <!-- slide -->
+               </ul>
+           </div> <!-- end hero-slider -->
+
+      </div> <!-- end twelve columns-->
+
+    </div> <!-- end row -->
+    <div class="col s12 m6 l4">
+        <div class="card">
+            <div class="card-content">
+                <a href="https://greenarchassociates.com/admin/"><span  class="card-title">Add Project  <i class="fa fa-plus"></i></span></a>
+            </div>
+        </div>
+    </div>
+
+</section> <!-- end homepage hero -->
+    <div class="wrapper" style="margin-top: 50px;">
+        <div class="row">
+
+            {% for project in projects %}
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="card-image">
+                                <img  class="detail-images" src="{{project.thumbnail.url}}" alt="{{project.title}}">
+                        </div>
+                        <div class="card-content">
+                            <span  class="card-title">{{project.title}}</span>
+                            <p>{{project.snippet}}</p>
+                            <a href="{% url 'detail' project.slug %}"><span  class="card-title">More Details</span></a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

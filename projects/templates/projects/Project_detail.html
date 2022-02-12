@@ -1,0 +1,69 @@
+{% extends 'base_layout.html ' %}
+
+{% block content %}
+
+<div class="row hero-content">
+
+    <div class="twelve columns hero-container">
+
+       <!-- hero-slider start-->
+       <div id="hero-slider" class="flexslider">
+
+           <ul class="slides">
+
+               <!-- slide -->
+               <li>
+                   <div class="flex-caption">
+                        <h1 class="">Say hello to <span>Kreo</span>. We create awesome and stunning
+                            digital solutions.
+                        </h1>
+
+                        <h3 class="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h3>
+                    </div>
+               </li>
+
+               <!-- slide -->
+               <li>
+                    <div class="flex-caption">
+                        <h1 class="">We are a small design studio dedicated to build great digital
+                            products.</h1>
+
+                        <h3 class="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h3>
+                    </div>
+               </li>
+
+               <!-- slide -->
+               <li>
+                   <div class="flex-caption">
+                        <h1 class="">Take a look at some of <a class="smoothscroll" href="#portfolio" title="portfolio" >our works</a> or
+                        <a class="smoothscroll" href="#contact" title="contact us">get in touch</a> to discuss how we can help you.</h1>
+
+                        <h3 class="">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</h3>
+                    </div>
+               </li>
+
+           </ul>
+
+       </div> <!-- end hero-slider -->
+    <div class="wrapper">
+        <div class="row">
+      
+                <div class="card">
+                    <div class="card-image">
+                        <img  class="col s12 m6 l6" src="{{project.thumbnail.url}}" alt="{{project.title}}">
+                        <img  class="col s12 m6 l6" src="{{project.persfective1.url}}" alt="{{project.title}}">
+                        <img  class="col s12 m6 l6" src="{{project.persfective2.url}}" alt="{{project.title}}">
+                        <img  class="col s12 m6 l6" src="{{project.persfective3.url}}" alt="{{project.title}}">
+                    </div>
+                    <div class="card-content">
+                        <p class="card-heading"><span class="grey">Project Title:</span> {{project.title}}</p>
+                        <p class="card-heading"><span class="grey">Project description:</span> {{project.body}}</p>
+                        <p class="card-heading" ><span class="grey">Location:</span> {{project.location}}</p>
+                        <p class="card-heading" ><span class="grey">Design by:</span> {{project.design_by}}</p>
+                        <p class="card-heading" ><span class="grey">Drawn by:</span> {{project.drawn_by}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
